@@ -1,0 +1,62 @@
+main {
+  color: #dcdcdc;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.col {
+  flex-grow: 1;
+  border: 2px solid #acd5d5;
+  background-color: #acd5d5;
+}
+
+.col__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  padding: 5px;
+  color: grey;
+  text-transform: uppercase ;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  background-color: rgba(255,255,255, .4);
+}
+
+.modal__content {
+  position: relative;
+  padding-top: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.closeModalIcon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 30px;
+  color: #000000;
+}
+
+.task-holder {
+  display: flex;
+  justify-content: space-between;
+}

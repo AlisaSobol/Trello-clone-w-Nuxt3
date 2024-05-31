@@ -1,0 +1,48 @@
+{
+  "name": "task-board",
+  "columns": [
+    {
+      "id": 1,
+      "name": "todo",
+      "tasks": [
+        {
+          "id": "1",
+          "name": "task 1",
+          "description": "task description"
+        }, {
+          "id": "2",
+          "name": "task 2",
+          "description": "task description"
+        }
+      ]
+    }, {
+      "id": 2,
+      "name": "in-progress",
+      "tasks": [
+        {
+          "id": "3",
+          "name": "task 3",
+          "description": "task description"
+        }, {
+          "id": "4",
+          "name": "task 4",
+          "description": "task description"
+        }
+      ]
+    }, {
+      "id": 3,
+      "name": "complete",
+      "tasks": [
+        {
+          "id": "5",
+          "name": "task 5",
+          "description": "task description"
+        }, {
+          "id": "6",
+          "name": "task 6",
+          "description": "task description"
+        }
+      ]
+    }
+  ]
+}
