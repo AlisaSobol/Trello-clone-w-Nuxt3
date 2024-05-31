@@ -4,6 +4,7 @@ import { useBoardStore } from '../stores/boardStore'
 const editState = ref(false)
 const newTaskName = ref('')
 const router = useRouter()
+const toast = useToast()
 
 const boardStore = useBoardStore()
 defineProps({
@@ -31,8 +32,14 @@ const addTask = (colIndex) => {
   newTaskName.value = ''
 }
 
-const deleteTask = ({columnIndex, taskIndex}) => {
+const deleteTask = ({columnIndex, taskIndex, taskName}) => {
   boardStore.deleteTask({columnIndex, taskIndex})
+  toast.add({
+    title: 'Task deleted',
+    description: `${taskName} has been deleted!`,
+    icon: 'i-heroicons-trash',
+    color: 'red'
+  })
 }
 
 const pickupTask = (event, {fromTaskIndex, fromColumnIndex}) => {
@@ -108,7 +115,7 @@ const pickupCol = (event, fromColumnIndex) => {
         <div class="task-holder">
           <strong @click="goToTask(task.id)" class="ticket__name">{{task.name}}</strong>
 
-          <UButton @click="deleteTask({columnIndex, taskIndex})"
+          <UButton @click="deleteTask({columnIndex, taskIndex, taskName: task.name})"
                    color="red"
                    variant="soft"
           >
